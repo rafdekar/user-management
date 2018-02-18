@@ -1,0 +1,28 @@
+<div class="container" style="margin-top:10%">
+  <div class="card">
+    <div class="card-header">
+      <div class="row">
+      <div class="col-sm-6">
+        <h4>User Management</h4>
+      </div>
+      <div class="col-sm-6 text-right">
+        <button type="button" (click)="logout()" class="btn btn-link">Logout</button>
+      </div>
+    </div>
+    </div>
+    <div class="card-body">
+      <ngb-tabset justify="justified">
+        <ngb-tab title="My Profile">
+          <ng-template ngbTabContent>
+            <app-my-profile></app-my-profile>
+          </ng-template>
+        </ngb-tab>
+        <ngb-tab title="Other Users">
+          <ng-template ngbTabContent>
+            <app-other-users></app-other-users>
+          </ng-template>
+        </ngb-tab>
+      </ngb-tabset>
+    </div>
+  </div>
+</div>

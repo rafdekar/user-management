@@ -1,0 +1,12 @@
+<div class="left-break">
+  <div style="margin-top:15px">
+    <b>First Name:</b> {{user.firstName}}
+    <br>
+    <b>Last Name:</b> {{user.lastName}}
+  </div>
+  <b>Skills: </b>
+  <div *ngFor="let skill of user.skills">
+    {{skill.name}}
+    <ngb-rating [(rate)]="skill.rate" [readonly]="readonly" (rateChange)="updateRate(skill)"></ngb-rating>
+  </div>
+</div>

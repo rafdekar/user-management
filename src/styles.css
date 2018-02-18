@@ -1,0 +1,16 @@
+@import "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css";
+
+.panel {
+    border: 1px solid rgb(207, 207, 207);
+    border-radius: 5px;
+    margin: 10px;
+    padding: 20px;
+}
+
+.vertical-center {
+    min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+    min-height: 100vh; /* These two lines are counted as one :-)       */
+  
+    display: flex;
+    align-items: center;
+  }

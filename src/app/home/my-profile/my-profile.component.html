@@ -1,0 +1,17 @@
+<div class="row" style="margin-top:15px">
+  <div class="col-sm-6">
+    <b>First Name:</b> {{user.firstName}}
+  </div>
+  <div class="col-sm-6">
+    <b>Last Name:</b> {{user.lastName}}
+  </div>
+</div>
+<b>Skills: </b>
+<div *ngFor="let skill of user.skills">
+  {{skill.name}}
+  <ngb-rating [(rate)]="skill.rate" [readonly]="readonly" (rateChange)="updateRate(skill)"></ngb-rating>
+</div>
+<input type="text" [(ngModel)]="newSkill.name" style="border: 1px solid black; border-radius: 5px; font-size:14px">
+<ngb-rating [(rate)]="newSkill.rate"></ngb-rating>
+
+<button type="button" (click)="add()" class="btn btn-link">Add</button>

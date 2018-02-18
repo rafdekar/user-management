@@ -1,0 +1,41 @@
+<div class="vertical-center">
+  <div class="card mx-auto" style="max-width:400px">
+    <div class="card-header">
+      <h4>Register</h4>
+    </div>
+    <div class="card-body">
+      <form (ngSubmit)="register()" #registerForm="ngForm">
+      <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input type="text" [(ngModel)]="user.firstName" class="form-control" name="firstName" required #firstName="ngModel">
+        <div [hidden]="firstName.valid || firstName.pristine" class="alert alert-danger">
+          First Name is required
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input type="text" [(ngModel)]="user.lastName" class="form-control" name="lastName" required #lastName="ngModel">
+        <div [hidden]="lastName.valid || lastName.pristine" class="alert alert-danger">
+          Last Name is required
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" [(ngModel)]="user.username" class="form-control" name="username" required #username="ngModel">
+        <div [hidden]="username.valid || username.pristine" class="alert alert-danger">
+          Username is required
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" [(ngModel)]="user.password" class="form-control" name="password" required #password="ngModel">
+        <div [hidden]="password.valid || password.pristine" class="alert alert-danger">
+          Password is required
+        </div>
+      </div>
+      <button [disabled]="!registerForm.valid" type="submit" class="btn btn-primary">Register</button>
+      <a routerLink="" class="btn btn-link">Login</a>
+    </form>
+    </div>
+  </div>
+</div>
